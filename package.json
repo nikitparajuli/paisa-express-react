@@ -1,0 +1,50 @@
+{
+  "name": "paisa",
+  "version": "0.0.1",
+  "description": "React client and Express backend, both written in Typescript.",
+  "author": "Nikit Parajuli <nikitparajuli@gmail.com> (https://github.com/nikitparajuli/)",
+  "contributors": [
+    "Nikit Parajuli <nikitparajuli@gmail.com> (https://github.com/nikitparajuli/)"
+  ],
+  "license": "MIT",
+  "homepage": "https://winwiz1.github.io/crisp-react/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winwiz1/crisp-react.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "nodejs",
+    "express",
+    "visual-studio-code",
+    "chrome-devtools",
+    "webpack",
+    "webpack-dev-server",
+    "typestyle",
+    "react-testing-library",
+    "supertest",
+    "jest",
+    "semantic-ui",
+    "boilerplate"
+  ],
+  "files": [
+    "./client/*",
+    "./server/*"
+  ],
+  "scripts": {
+    "install": "cd client && yarn",
+    "postinstall": "cd server && yarn",
+    "test": "cd client && yarn test",
+    "posttest": "cd server && yarn copy && yarn test",
+    "compile": "cd client && yarn compile",
+    "postcompile": "cd server && yarn compile",
+    "build": "cd client && yarn build",
+    "postbuild": "cd server && yarn prestart",
+    "build:prod": "cd client && yarn build:prod",
+    "postbuild:prod": "cd server && yarn prestart",
+    "start:prod": "cd client && yarn build:prod",
+    "poststart:prod": "cd server && yarn start:prod",
+    "run:prod": "cd server && yarn run:prod"
+  }
+}
