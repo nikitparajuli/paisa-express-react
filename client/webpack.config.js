@@ -34,7 +34,7 @@ const getWebpackConfig = (env, argv) => {
           ],
         },
         {
-          test: /\.css$/,
+          test: /\.(css|scss|sass)$/,
           use: ['style-loader', 'css-loader'],
         },
       ]

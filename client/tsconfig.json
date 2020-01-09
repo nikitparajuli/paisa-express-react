@@ -10,7 +10,7 @@
   ],
   "compilerOptions": {
     "outDir": "./dist/js/",
-    "allowSyntheticDefaultImports": false,           
+    "allowSyntheticDefaultImports": true,           
     "target": "es5",
     "downlevelIteration": true,
     "importHelpers": true,                           
@@ -36,6 +36,6 @@
     "suppressImplicitAnyIndexErrors": false,
     "removeComments": true,
     "typeRoots" : ["./node_modules/@types"],
-    "esModuleInterop": false         // we don't have issues related to imports      
+    "esModuleInterop": true
   }
 }

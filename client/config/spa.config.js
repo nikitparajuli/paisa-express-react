@@ -49,7 +49,7 @@ var ConfiguredSPAs = function() {
     })
   ];
 
-  SPAs.appTitle = "Crisp React";
+  SPAs.appTitle = "Paisa";
   /****************** End SPA Configuration ******************/
 
   SPAs.verifyParameters = function(verifier) {

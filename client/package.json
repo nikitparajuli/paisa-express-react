@@ -39,6 +39,10 @@
     "copy": "copyfiles -f dist/* ../server/build/client/"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "antd": "^3.26.6",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-helmet": "5.2.1",
