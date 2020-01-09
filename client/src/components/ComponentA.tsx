@@ -3,16 +3,15 @@
  * to the First SPA and uses BaseComponent
  * to render self.
  */
-import * as React from "react";
-import { Header, Container } from "semantic-ui-react";
-import { Navigation } from "./Navigation";
-import { BaseComponent } from "./BaseComponent";
+import React from "react";
 
-const Description: React.FC = _props => {
+import { Navigation, BaseComponent } from '../components';
+
+type ComponentAProps = {};
+
+const Description: React.FC<ComponentAProps> = () => {
   return (
-    <section>
-      <Container text textAlign="justified">
-      <Header as="h3">Hello from ComponentA</Header>
+    <>
       <p>
         <code>ComponentA</code> is used by <code>first.tsx</code> which has been
         set as an 'entry point' of the 'first' JS bundle by <code>
@@ -21,8 +20,7 @@ const Description: React.FC = _props => {
         except for components under <code>node_modules/</code> separated into the
         'vendor' bundle.
       </p>
-      </Container>
-    </section>
+    </>
   );
 };
 

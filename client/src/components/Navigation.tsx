@@ -4,28 +4,27 @@
  */
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
-import * as SPAs from "../../config/spa.config";
+import { Menu, Icon } from 'antd';
 
-export const Navigation: React.FC = _props => {
+type NavigationProps = {};
+
+export const Navigation: React.FC<NavigationProps> = () => {
+  const [current, setCurrent] = React.useState('home');
+
+  const handleClick = (e: any) => {
+    setCurrent(e.key);
+  };
+
   return (
-    <nav>
-      <Menu vertical compact borderless>
-        <Menu.Item>
-          <Menu.Header>First SPA</Menu.Header>
-          <Menu.Menu>
-            <Menu.Item as={Link} to="/home">Paisa Home</Menu.Item>
-            <Menu.Item as={Link} to="/a">ComponentA</Menu.Item>
-            <Menu.Item as={Link} to="/b">ComponentB</Menu.Item>
-          </Menu.Menu>
+    <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+        <Menu.Item key="home">
+          <Link to="/home">
+            <Icon type="home" /> Home
+          </Link>
         </Menu.Item>
-        <Menu.Item>
-          <Menu.Header>Second SPA</Menu.Header>
-          <Menu.Menu>
-            <Menu.Item href={`/${SPAs.getNames()[1]}.html`}>ComponentC</Menu.Item>
-          </Menu.Menu>
+        <Menu.Item key="categories" disabled>
+          <Icon type="appstore" /> Categories
         </Menu.Item>
       </Menu>
-    </nav>
   );
 };

@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import './index.scss';
+import 'antd/dist/antd.css';
 import { ComponentA, ComponentB, Home } from '../components/';
 import { Overview } from "../components/Overview";
 import * as SPAs from "../../config/spa.config";
@@ -15,9 +16,6 @@ import * as SPAs from "../../config/spa.config";
 ReactDOM.render(
   <Router>
     <Helmet title={SPAs.appTitle} />
-    <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "3rem" }}>
-          <h2>Welcome to {SPAs.appTitle}</h2>
-    </div>
     <Switch>
       <Route exact path="/" component={Overview} />
       <Route path="/a" component={ComponentA} />
